@@ -1,12 +1,39 @@
 {
-  "name": "wangeditor-mathlive-formula",
+  "name": "@t000j/wangeditor-mathlive-formula",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A MathLive formula plugin for wangEditor v5",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "wangeditor",
+    "wang-editor",
+    "mathlive",
+    "formula",
+    "latex",
+    "editor-plugin"
+  ],
+  "author": "laole",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t000j/wangeditor-mathlive-formula.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t000j/wangeditor-mathlive-formula/issues"
+  },
+  "homepage": "https://github.com/t000j/wangeditor-mathlive-formula#readme",
+  "peerDependencies": {
+    "@wangeditor/editor": "^5.1.0"
+  },
+  "dependencies": {
+    "mathlive": "^0.109.0",
+    "snabbdom": "^3.6.2"
+  }
 }
