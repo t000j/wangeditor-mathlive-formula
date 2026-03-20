@@ -2,7 +2,21 @@ import "mathlive/static.css";
 import "mathlive";
 
 class WEMathliveCard extends HTMLElement {
-  async connectedCallback() {
+  static get observedAttributes() {
+    return ["data-value"];
+  }
+
+  connectedCallback() {
+    this.renderFormula();
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "data-value" && oldValue !== newValue) {
+      this.renderFormula();
+    }
+  }
+
+  async renderFormula() {
     const value = this.dataset.value || "";
     this.innerHTML = `<math-span>${value}</math-span>`;
 
